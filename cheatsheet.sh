@@ -84,3 +84,20 @@ kubecetl describe deployment myapp-deployment
 
 # Get all the objects created in the session
 kubectl get all
+
+#Create a record in the history so you know what changes you make
+kubectl create -f deployment.yaml --record
+
+# Create deployment on the fly
+# Put the name and image
+# Then can just scale the deployment replicas
+kubectl create deployment http-d-frontend --image=hhtpd:2.4-alpine
+kubectl scale deployment --replicas=3
+
+#Rollout status
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+# Undo deployment
+kubectl rollout undo deployment/myapp-deployment
+
