@@ -1,0 +1,10 @@
+# Stick with double space for the child level
+# Remember to put a space after the key value
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+spec:
+  containers:
+    - name: redis
+      image: redis123
