@@ -110,3 +110,6 @@ kubectl get services
 kubectl describe services kubernetes
 # Create the service
 kubectl create -f service-definition-1.yaml
+
+# Get both deployments and service
+kubectl get deployments,services
