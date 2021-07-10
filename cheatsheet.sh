@@ -80,7 +80,7 @@ kubectl scale replicaset –replicas=2 new-replica-set
 kubectl get deployments
 
 # describe
-kubecetl describe deployment myapp-deployment
+kubectl describe deployment myapp-deployment
 
 # Get all the objects created in the session
 kubectl get all
@@ -101,3 +101,12 @@ kubectl rollout history deployment/myapp-deployment
 # Undo deployment
 kubectl rollout undo deployment/myapp-deployment
 
+# -------
+# SERVICES
+# -------
+# Get number of services
+kubectl get services
+# Describe services
+kubectl describe services kubernetes
+# Create the service
+kubectl create -f service-definition-1.yaml
